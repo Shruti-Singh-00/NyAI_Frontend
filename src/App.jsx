@@ -5,6 +5,11 @@ import Advocates from "./pages/Advocates.jsx"
 import AboutUs from "./pages/aboutUs";
 import { Routes, Route } from 'react-router-dom'
 
+import Drafting1 from "./pages/Drafting/Drafting1.jsx"
+import Drafting2 from "./pages/Drafting/Drafting2.jsx"
+import Drafting3 from "./pages/Drafting/Drafting3.jsx"
+import Drafting4 from "./pages/Drafting/Drafting4.jsx"
+
 function App() {
 
   return (
@@ -13,6 +18,10 @@ function App() {
     <Route path={"/drafting"} element={<Drafting/>}/>
     <Route path={"/advocates"} element={<Advocates/>}/>
     <Route path={"/about"} element={<AboutUs/>}/>
+    <Route path={"/path1"} element={<Drafting1/>}/>
+    <Route path={"/path2"} element={<Drafting2/>}/>
+    <Route path={"/path3"} element={<Drafting3/>}/>
+    <Route path={"/path4"} element={<Drafting4/>}/>
     </Routes>
   )
 }

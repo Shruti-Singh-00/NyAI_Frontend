@@ -61,7 +61,7 @@
   font-size: 48px;
 }
 
-.homeSlide .p2{
+.homeSlide .p2 {
   position: absolute;
   top: 400px;
   left: 45vw;
@@ -71,8 +71,56 @@
 /* Expert Section */
 .expert {
   text-align: center;
-  color: #477769;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.expert .container{
+  display: flex;
+  justify-content: space-between;
+  max-width: 70vw;
+}
+
+.expert .container .card {
+  max-width: 16rem;
+  height: 400px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  color: white;
+}
+
+.expert .container .card .card-img-top{
+  max-width: 14rem;
+  height: 150px;
+  margin: 20px 10px;
+}
+
+.card .card-img-top img{
+  width: 200px;
+}
+
+.card .card-img-top .firstImg,.secondImg{
+  max-width: 110px;
+  max-height: auto;
+  background-color: aliceblue;
+  
+}
+
+.card .card-img-top .secondImg{
+  margin-left: -40px;
+}
+
+.expert .container .card .card-text{
+  font-style: italic;
+  font-size: small;
+}
+
+.expert .container .greenCard{
+  background-color: #477769;
+}
+
+.expert .container .orangeCard{
+  background-color: #eb934f;
+  margin-top: 150px;
 }
 
 /* Unveiled section */
@@ -95,8 +143,8 @@
   line-height: normal;
   color: #477769;
 }
-.assist .p{
+
+.assist .p {
   max-width: 700px;
   text-align-last: center;
-
 }
