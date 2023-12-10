@@ -1,0 +1,52 @@
+.drafting .green{
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;  /**Mulish**/
+    font-weight: 800;
+    line-height: normal;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 960px;
+    height: auto;
+    /* text-align: justify; For Edge */
+  text-align-last: center;
+  margin-top: 60px;
+    
+}
+
+.drafting .green {
+    background: -webkit-linear-gradient(#EB934F, #477769);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.drafting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oran{
+    color: #EB934F;
+}
+
+.container{
+    margin-top: 50px;
+}
+.container .row .col {
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #37455b;
+    width: 50%;
+    height: 45vh;
+    /* font-family: Lato; */
+}
+
+.container .row .col h1{
+    font-size: 2rem;
+}
+
+.container .row .boundri{
+    border-right: 4px solid rgba(0, 0, 0 ,0.1);
+}

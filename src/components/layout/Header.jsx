@@ -56,9 +56,6 @@ const Header = () => {
           <NavLink className={"a"} to={"/drafting"}>
             DRAFTING
           </NavLink>
-          <NavLink className={"a"} to={"/simplifier"}>
-            SIMPLIFIER
-          </NavLink>
           <NavLink className={"a"} to={"/advocates"}>
             ADVOCATES
           </NavLink>
