@@ -3,7 +3,7 @@
   height: 700.904px;
   margin-top: 20px;
   position: relative;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   z-index: -1px;
   overflow: hidden;
 }
@@ -68,16 +68,29 @@
   color: #eb934f;
 }
 
-/* Expert Section */
+/*-------------------------------------- Expert Section ---------------------------------------*/
 .expert {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: -60px;
 }
 
-.expert .container{
+.expert .container {
   display: flex;
   justify-content: space-between;
   max-width: 70vw;
+  margin-top: -5px;
+}
+
+.expert .circle {
+  position: absolute;
+  top: 1000px;
+  width: 425.532px;
+  height: 431.91px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  z-index: -5;
 }
 
 .expert .container .card {
@@ -86,54 +99,113 @@
   flex-shrink: 0;
   border-radius: 30px;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
-.expert .container .card .card-img-top{
+.expert .container .card .card-img-top {
   max-width: 14rem;
   height: 150px;
   margin: 20px 10px;
 }
 
-.card .card-img-top img{
-  width: 200px;
+.card .card-img-top img {
+  max-width: 200px;
+  height: auto;
 }
 
-.card .card-img-top .firstImg,.secondImg{
+.card .card-img-top .firstImg,
+.secondImg {
   max-width: 110px;
   max-height: auto;
   background-color: aliceblue;
-  
+  border-radius: 20px;
 }
 
-.card .card-img-top .secondImg{
-  margin-left: -40px;
+.card .card-img-top .firstImg {
+  margin-right: 2px;
 }
 
-.expert .container .card .card-text{
+.expert .container .card .card-text {
   font-style: italic;
   font-size: small;
+  text-align-last: center;
+  max-width: 150px;
 }
 
-.expert .container .greenCard{
+.expert .container .greenCard {
   background-color: #477769;
 }
 
-.expert .container .orangeCard{
+.expert .container .orangeCard {
   background-color: #eb934f;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
-/* Unveiled section */
+/*---------------------------------------- Unveiled section ----------------------------------------*/
 .unveiled {
   text-align: center;
   color: #477769;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Assist section */
-.assist {
+.unveiledBox .row {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40px;
+}
+
+.unveiledBox .row .col {
+  max-width: 437px;
+  max-height: 345.718px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.unveiledBox .row .col p {
+  align-self: center;
+  width: 250px;
+  color: #477769;
+  font-size: small;
+  text-justify: auto;
+}
+
+.unveiled .row .col h2 {
+  font-weight: 700;
+}
+
+.unveiledBox .row .col h2 span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  /* background-color: #477769; */
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: medium;
+}
+
+.unveiledBox .row .col img {
+  max-width: 437px;
+  max-height: 345.718px;
+}
+
+.seprater {
+  max-width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/*---------------------------------------- Assist section ----------------------------------------*/
+.assist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-family: Mulish;
@@ -147,4 +219,22 @@
 .assist .p {
   max-width: 700px;
   text-align-last: center;
+}
+
+.assist img {
+  width: 1500.181px;
+  height: 670.29px;
+  margin-top: -50px;
+  filter: invert(0) contrast(1.1) drop-shadow(10px 10px 3px rgb(165, 162, 162));
+}
+
+/*---------------------------------------- Matrics section ----------------------------------------*/
+.matrics .row{
+  padding-left: 100px;
+  max-width: 100vw;
+  height: auto;
+}
+.matrics .row .col{
+  display: flex;
+  flex-direction: column;
 }

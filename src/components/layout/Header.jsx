@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Images from "../../assets/Images";
 import "../CSS/Header.css";
 
 const Header = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const onClickHandle = () => {
@@ -45,21 +46,21 @@ const Header = () => {
     <header>
       <div className="navbar">
         <div className="logo">
-          <NavLink className={"a"} to={"/"}>
+          <NavLink className={`a`} to={"/"}>
             <img src={Images.logo} alt="logo.png"/>
           </NavLink>
         </div>
         <ul className="links">
-          <NavLink className={"a"} to={"/"}>
+          <NavLink className={`a ${location?.pathname === "/"?"active":" "}`} style={{color: `${location?.pathname === "/"?"#EB934f":"#477769"}`}} to={"/"}>
             HOME
           </NavLink>
-          <NavLink className={"a"} to={"/drafting"}>
+          <NavLink className={`a ${location?.pathname === "/drafting"?"active":" "}`} style={{color: `${location?.pathname === "/drafting"?"#EB934f":"#477769"}`}} to={"/drafting"}>
             DRAFTING
           </NavLink>
-          <NavLink className={"a"} to={"/advocates"}>
+          <NavLink className={`a ${location?.pathname === "/advocates"?"active":" "}`} style={{color: `${location?.pathname === "/advocates"?"#EB934f":"#477769"}`}} to={"/advocates"}>
             ADVOCATES
           </NavLink>
-          <NavLink className={"a"} to={"/about"}>
+          <NavLink className={` a ${location?.pathname === "/about"?"active":" "}`} style={{color: `${location?.pathname === "/about"?"#EB934f":"#477769"}`}} to={"/about"}>
             ABOUT US
           </NavLink>
         </ul>
