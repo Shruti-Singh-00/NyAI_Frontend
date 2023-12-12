@@ -30,7 +30,7 @@ const footer = () => {
           <h4>
             <b>About Us</b>
           </h4>
-          <div className="element">Tearms</div>
+          <div className="element">Terms</div>
         </div>
       </div>
     </div>
