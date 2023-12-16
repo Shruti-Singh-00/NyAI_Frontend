@@ -63,6 +63,9 @@ const Header = () => {
           <NavLink className={` a ${location?.pathname === "/about"?"active":" "}`} style={{color: `${location?.pathname === "/about"?"#EB934f":"#477769"}`}} to={"/about"}>
             ABOUT US
           </NavLink>
+          <NavLink className={` a ${location?.pathname === "/help"?"active":" "}`} style={{color: `${location?.pathname === "/help"?"#EB934f":"#477769"}`}} to={"/help"}>
+            Help
+          </NavLink>
         </ul>
         <NavLink to={"/"} className="action_btn">
           Login
@@ -95,6 +98,9 @@ const Header = () => {
           </NavLink>
           <NavLink className={"a"} to={"/about"}>
             ABOUT US
+          </NavLink>
+          <NavLink className={"a"} to={"/help"}>
+            Help
           </NavLink>
           <NavLink to={"/"} className="action_btn">
             Login

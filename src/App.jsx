@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import Drafting from "./pages/Drafting.jsx";
 import Advocates from "./pages/Advocates.jsx";
 import AboutUs from "./pages/aboutUs";
+import Help from "./pages/Help.jsx"
 import { Routes, Route } from "react-router-dom";
 
 import Drafting1 from "./pages/Drafting/Drafting1.jsx";
@@ -18,9 +19,10 @@ function App() {
       <Route path={"/drafting/browse"} element={<Drafting1 />} />
       <Route path={"/drafting/browse/generate"} element={<Drafting2/>} />
       <Route path={"/drafting/upload"} element={<Drafting3 />} />
+      <Route path={"/drafting/path4"} element={<Drafting4 />} />
       <Route path={"/advocates"} element={<Advocates />} />
       <Route path={"/about"} element={<AboutUs />} />
-      <Route path={"/drafting/path4"} element={<Drafting4 />} />
+      <Route path={"/help"} element={<Help/>} />
     </Routes>
   );
 }
