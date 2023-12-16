@@ -1,12 +1,17 @@
-import {NavLink, useLocation} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Layout from "../../components/layout/Layout";
 import "../css/Drafting1.css";
 import RentAggrement from "../Samples/Rent_Agreement.pdf";
+import agreementForFamilySettlement from "../Samples/agreementForFamilySettlement.pdf";
+import ConsumerCourtComplaint from "../Samples/ConsumerCourtComplaint.pdf";
+import dishonorOfCheque from "../Samples/dishonorOfCheque.pdf";
+import PossessionLetterOfProperty from "../Samples/PossessionLetterOfProperty.pdf";
+import will from "../Samples/will.pdf";
+
 
 const Drafting1 = () => {
   const location = useLocation();
   console.log(location.pathname);
-
 
   return (
     <Layout title={"Drafting-1"}>
@@ -28,7 +33,10 @@ const Drafting1 = () => {
           </h2>
 
           <div className="accordion accordion-flush" id="accordionExample">
-            <div className="accordion-item border-bottom border-5" style={{border:"none"}}>
+            <div
+              className="accordion-item border-bottom border-5"
+              style={{ border: "none" }}
+            >
               <h2 className="accordion-header">
                 <button
                   className="accordion-button"
@@ -52,13 +60,24 @@ const Drafting1 = () => {
                   ensuring a straightforward experience for both landlords and
                   tenants.
                   <div className="row">
-                    <div className="col"><a href={RentAggrement} target="_blank" rel="noreferrer">View Sample</a></div>
-                    <div className="col"><NavLink className={"link"} to={"/drafting/browse/generate"}>Generate Document</NavLink></div>
+                    <div className="col">
+                      <a href={RentAggrement} target="_blank" rel="noreferrer">
+                        View Sample
+                      </a>
+                    </div>
+                    <div className="col">
+                      <NavLink
+                        className={"link"}
+                        to={"/drafting/browse/generate/1"}
+                      >
+                        Generate Document
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="accordion-item border-bottom border-5">
               <h2 className="accordion-header">
                 <button
@@ -78,19 +97,31 @@ const Drafting1 = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Simplify your lease with a clear, concise rental agreement.
-                  Streamline terms and conditions for hassle-free renting,
-                  ensuring a straightforward experience for both landlords and
-                  tenants.
+                  Resolve consumer disputes effortlessly with our Consumer Court
+                  Complaint generation. Crafted to simplify the process, our
+                  quick and user-friendly service ensures a hassle-free
+                  experience, allowing you to address grievances efficiently and
+                  seek timely resolutions.
                   <div className="row">
-                    <div className="col"><a href={"/"} target="_blank" rel="noreferrer">View Sample</a></div>
-                    <div className="col"><a href={"/"} target="_blank" rel="noreferrer">Generate Document</a></div>
+                    <div className="col">
+                      <a href={ConsumerCourtComplaint} target="_blank" rel="noreferrer">
+                        View Sample
+                      </a>
+                    </div>
+                    <div className="col">
+                      <NavLink
+                        className={"link"}
+                        to={"/drafting/browse/generate/2"}
+                      >
+                        Generate Document
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
-            {/* <div className="accordion-item border-bottom border-5">
+
+            <div className="accordion-item border-bottom border-5">
               <h2 className="accordion-header">
                 <button
                   className="accordion-button collapsed"
@@ -100,7 +131,7 @@ const Drafting1 = () => {
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  Employment Offer Letter
+                  Agreement For Family Settlement
                 </button>
               </h2>
               <div
@@ -109,14 +140,30 @@ const Drafting1 = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Simplify your lease with a clear, concise rental agreement.
-                  Streamline terms and conditions for hassle-free renting,
-                  ensuring a straightforward experience for both landlords and
-                  tenants.
+                  'Agreement for Family Settlement' Facilitate harmonious family
+                  resolutions with our hassle-free Agreement for Family
+                  Settlement. Tailored to streamline asset distribution and
+                  resolve disputes, our document generation ensures a quick and
+                  straightforward process for all parties involved.F
+                  <div className="row">
+                    <div className="col">
+                      <a href={agreementForFamilySettlement} target="_blank" rel="noreferrer">
+                        View Sample
+                      </a>
+                    </div>
+                    <div className="col">
+                      <NavLink
+                        className={"link"}
+                        to={"/drafting/browse/generate/3"}
+                      >
+                        Generate Document
+                      </NavLink>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="accordion-item border-bottom border-5">
               <h2 className="accordion-header">
                 <button
@@ -127,7 +174,7 @@ const Drafting1 = () => {
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                  Power of Attorny
+                  Dishonor of Cheque
                 </button>
               </h2>
               <div
@@ -136,14 +183,29 @@ const Drafting1 = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Simplify your lease with a clear, concise rental agreement.
-                  Streamline terms and conditions for hassle-free renting,
-                  ensuring a straightforward experience for both landlords and
-                  tenants.
+                  Efficiently address dishonored cheques with our streamlined
+                  Dishonor of Cheque document generation. Our quick and reliable
+                  service helps you navigate the legal process seamlessly,
+                  ensuring a prompt resolution to cheque-related issues.
+                  <div className="row">
+                    <div className="col">
+                      <a href={dishonorOfCheque} target="_blank" rel="noreferrer">
+                        View Sample
+                      </a>
+                    </div>
+                    <div className="col">
+                      <NavLink
+                        className={"link"}
+                        to={"/drafting/browse/generate/4"}
+                      >
+                        Generate Document
+                      </NavLink>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="accordion-item border-bottom border-5">
               <h2 className="accordion-header">
                 <button
@@ -154,7 +216,7 @@ const Drafting1 = () => {
                   aria-expanded="false"
                   aria-controls="collapseFive"
                 >
-                  Loan Agreement
+                  Possession Letter of Property
                 </button>
               </h2>
               <div
@@ -163,14 +225,30 @@ const Drafting1 = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Simplify your lease with a clear, concise rental agreement.
-                  Streamline terms and conditions for hassle-free renting,
-                  ensuring a straightforward experience for both landlords and
-                  tenants.
+                  Facilitate seamless property handovers with our hassle-free
+                  Possession Letter generation. Crafted to streamline the
+                  transfer process, our service ensures a clear and concise
+                  document, making property transitions straightforward for both
+                  parties involved.
+                  <div className="row">
+                    <div className="col">
+                      <a href={PossessionLetterOfProperty} target="_blank" rel="noreferrer">
+                        View Sample
+                      </a>
+                    </div>
+                    <div className="col">
+                      <NavLink
+                        className={"link"}
+                        to={"/drafting/browse/generate/5"}
+                      >
+                        Generate Document
+                      </NavLink>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="accordion-item border-bottom border-5">
               <h2 className="accordion-header">
                 <button
@@ -181,7 +259,7 @@ const Drafting1 = () => {
                   aria-expanded="false"
                   aria-controls="collapseSix"
                 >
-                  Contract Termination
+                  Will
                 </button>
               </h2>
               <div
@@ -190,15 +268,30 @@ const Drafting1 = () => {
                 data-bs-parent="#accordionExample"
               >
                 <div className="accordion-body">
-                  Simplify your lease with a clear, concise rental agreement.
-                  Streamline terms and conditions for hassle-free renting,
-                  ensuring a straightforward experience for both landlords and
-                  tenants.
+                  Secure your legacy effortlessly with our quick and hassle-free
+                  Will generation. Crafted to simplify the process, our service
+                  ensures a straightforward experience for individuals looking
+                  to document their wishes and distribute assets efficiently.
+                  <div className="row">
+                    <div className="col">
+                      <a href={will} target="_blank" rel="noreferrer">
+                        View Sample
+                      </a>
+                    </div>
+                    <div className="col">
+                      <NavLink
+                        className={"link"}
+                        to={"/drafting/browse/generate/6"}
+                      >
+                        Generate Document
+                      </NavLink>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div className="accordion-item border-bottom border-5">
+
+            {/* <div className="accordion-item border-bottom border-5">
               <h2 className="accordion-header">
                 <button
                   className="accordion-button collapsed"
@@ -358,8 +451,7 @@ const Drafting1 = () => {
                   tenants.
                 </div>
               </div>
-            </div>
-            */}
+            </div> */}
           </div>
         </div>
       </div>

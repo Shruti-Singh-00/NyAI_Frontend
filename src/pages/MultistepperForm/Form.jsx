@@ -91,7 +91,7 @@ const First = ({ page, setPage, setFormData, formData,onChange }) => {
 
 
 const Second = ({ page, setPage, handleSubmit, formData, setFormData, onChange }) => {
-  const { directorName, property, rentAmount, period, rentDate, aggrementDate ,witness1,witness2 } = formData;
+  const { directorName, property, rentAmount, period, rentDate, aggrementDate,aggrementPlace ,witness1,witness2 } = formData;
 
   return (
     <>
@@ -168,9 +168,9 @@ const Second = ({ page, setPage, handleSubmit, formData, setFormData, onChange }
           <input
             type="text"
             className="form-control"
-            name="witness1"
-            id="witness1"
-            value={witness1}
+            name="aggrementPlace"
+            id="aggrementPlace"
+            value={aggrementPlace}
             onChange={onChange}
             required
             />
@@ -179,7 +179,7 @@ const Second = ({ page, setPage, handleSubmit, formData, setFormData, onChange }
             <label>Date of Rent Agreement</label>
         <div className="mb-3">
           <input
-            type="text"
+            type="date"
             className="form-control"
             name="aggrementDate"
             id="aggrementDate"
