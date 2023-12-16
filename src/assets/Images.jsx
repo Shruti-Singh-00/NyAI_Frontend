@@ -20,6 +20,7 @@ const Images = {
     arrow2: new URL('./Unveiled/arrow2.png', import.meta.url).href,
     starSeprater: new URL('./Unveiled/starSeprater.png', import.meta.url).href,
     mockUp: new URL('./Unveiled/mockUp.png', import.meta.url).href,
+    progress: new URL('./Drafting/progress.png', import.meta.url).href,
 }
 
 export default Images

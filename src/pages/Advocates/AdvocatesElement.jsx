@@ -1,4 +1,4 @@
-import "../Css/advocatesElement.css";
+import "../Css/AdvocatesElement.css";
 
 const advocatesElement = (props) => {
   const { img, name, phone, email, address, skill } = props;

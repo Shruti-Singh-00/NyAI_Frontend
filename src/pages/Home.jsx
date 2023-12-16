@@ -209,7 +209,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="seprater"><img src={Images.starSeprater} alt="Seprater"/></div>
+      <div className="seprater" style={{marginBottom: "-100px"}}><img src={Images.starSeprater} alt="Seprater"/></div>
 
       {/* ----------------------------------------------other section on home page------------------------------------------- */}
       <div className="assist">
@@ -241,7 +241,6 @@ const Home = () => {
             </div>
         </div>
       </div>
-<div className="seprater" style={{marginBottom: "-100px"}}><img src={Images.starSeprater} alt="Seprater"/></div>
     </Layout>
   );
 };

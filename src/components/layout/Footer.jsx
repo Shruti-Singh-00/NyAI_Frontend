@@ -5,6 +5,7 @@ import "../Css/Footer.css";
 const footer = () => {
   return (
     <div className="footerBox container-fluid">
+<div className="seprater"><img src={Images.starSeprater} alt="Seprater"/></div>
       <div className="raw">
         <div className="logo col-3">
           <NavLink className={"a"} to={"/"}>
