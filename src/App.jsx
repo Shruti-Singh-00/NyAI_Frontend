@@ -11,10 +11,17 @@ import Drafting2 from "./pages/Drafting/Drafting2.jsx";
 import Drafting3 from "./pages/Drafting/Drafting3.jsx";
 import Drafting4 from "./pages/Drafting/Drafting4.jsx";
 
+import Login from "./pages/Auth/Login.jsx";
+import Register from "./pages/Auth/Register.jsx";
+import ForgotPassword from "./pages/Auth/ForgotPassword.jsx";
+
 function App() {
   return (
     <Routes>
       <Route path={"/"} element={<Home />} />
+      <Route path={"/login"} element={<Login />} />
+      <Route path={"/register"} element={<Register />} />
+      <Route path={"/forget-Password"} element={<ForgotPassword />} />
       <Route path={"/drafting"} element={<Drafting />} />
       <Route path={"/drafting/browse"} element={<Drafting1 />} />
       <Route path={"/drafting/browse/generate/:id"} element={<Drafting2/>} />

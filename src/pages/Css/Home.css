@@ -1,18 +1,19 @@
 .homeSlide {
-  width: 1562.636px;
-  height: 700.904px;
+  width: 100vw;
+  height: 100vh;
   margin-top: 20px;
   position: relative;
   /* background-color: lightgray; */
   z-index: -1px;
   overflow: hidden;
+  display:flex;
+  align-items: center;
 }
 
 .homeSlide .humanTech {
   position: absolute;
-  /* width: 100vw; */
-  width: 1562.636px;
-  height: 720.904px;
+  width: 100vw;
+  height: 100vh;
   transform: rotate(0.514deg);
   flex-shrink: 0;
   border-radius: 17px;
@@ -21,23 +22,25 @@
   filter: drop-shadow(-5px 5px 10px black);
 }
 
+
 .homeSlide .blob {
   position: absolute;
-  left: 13vw;
-  top: -100px;
-  width: 1250.463px;
-  max-height: 1200.869px;
-  transform: rotate(17.621deg);
-  flex-shrink: 0;
+  left: 5vw;
+  bottom: -100px;
+  width: 100vw;
+  height: 100vh;
+  transform: rotate(90.621deg);
+  transform: scale(1,1.4);
+  transform: translateY(30deg);
   background: 0% / cover no-repeat;
 }
 
-.homeSlide .btn {
+.homeSlide .started_btn {
   position: absolute;
-  top: 450px;
-  left: 45vw;
-  width: 230.582px;
-  height: 50.019px;
+  bottom: 180px;
+  left: 42vw;
+  width: 20%;
+  height: 7%;
   background-color: #eb934f;
   outline-width: 2px;
   outline-color: white;
@@ -52,7 +55,7 @@
 
 .homeSlide .p {
   position: absolute;
-  top: 250px;
+  bottom: 300px;
   text-align: center;
   color: #477769;
   width: 100vw;
@@ -70,31 +73,48 @@
 
 /*-------------------------------------- Expert Section ---------------------------------------*/
 .expert {
+  width: 100%;
+  height: auto;
+  position: relative;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: -60px;
+  margin-bottom: 50px;
 }
 
-.expert .container {
+.expert .container-md {
   display: flex;
-  justify-content: space-between;
-  max-width: 70vw;
+  justify-content: space-evenly;
+  width: 90%;
+  height: auto;
   margin-top: -5px;
 }
+@media (min-width: 323px) and (max-width: 990)  {
+    .expert .container-md{
+      display: flex;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: space-between;
+    }
+    .expert .circleDiv .circle{
+      position: relative;
+    }
+}
 
-.expert .circle {
+.expert .circleDiv .circle{
   position: absolute;
-  top: 1000px;
-  width: 425.532px;
-  height: 431.91px;
-  border-radius: 50%;
-  display: inline-block;
+  top: 300px;
+  width: 30%;
+  height: 55%;
+  display: flex;
+  justify-content: space-around;
   opacity: 0.5;
+  border-radius: 50%;
   z-index: -5;
 }
 
-.expert .container .card {
-  max-width: 16rem;
+.expert .container-md .card {
+  position: relative;
+  width: 16rem;
   height: 400px;
   flex-shrink: 0;
   border-radius: 30px;
@@ -103,9 +123,9 @@
   align-items: center;
 }
 
-.expert .container .card .card-img-top {
+.expert .container-md .card .card-img-top {
   max-width: 14rem;
-  height: 150px;
+  max-height: 150px;
   margin: 20px 10px;
 }
 
@@ -114,30 +134,27 @@
   height: auto;
 }
 
-.card .card-img-top .firstImg,
-.secondImg {
+.card .card-img-top .firstImg{
   max-width: 110px;
   max-height: auto;
   background-color: aliceblue;
   border-radius: 20px;
-}
-
-.card .card-img-top .firstImg {
   margin-right: 2px;
 }
 
-.expert .container .card .card-text {
+
+.expert .container-md .card .card-text {
   font-style: italic;
   font-size: small;
   text-align-last: center;
   max-width: 150px;
 }
 
-.expert .container .greenCard {
+.expert .container-md .greenCard {
   background-color: #477769;
 }
 
-.expert .container .orangeCard {
+.expert .container-md .orangeCard {
   background-color: #eb934f;
   margin-top: 200px;
 }

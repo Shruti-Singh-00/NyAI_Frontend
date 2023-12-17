@@ -16,8 +16,10 @@ const Home = () => {
             <span style={{ color: "#EB934F" }}>Ny</span>AI
           </b>
         </p>
-        <p className="p2">Your AI-powered legal companion</p>
-        <button className="btn btn-warning">Get Started</button>
+        <div>
+          <center><p className="p2">Your AI-powered legal companion</p></center>
+          <button className="btn started_btn btn-warning">Get Started</button>
+        </div>
       </div>
 
       {/* ----------------------------------------------other section on home page------------------------------------------- */}
@@ -27,8 +29,13 @@ const Home = () => {
           Advisors
         </h1>
         <h2>Anytime, Anywhere</h2>
-        <div className="container mt-5">
+        <div className="container-md mt-5">
           <div className="card p-2 greenCard">
+            <img
+              src={Images.farmer2}
+              alt="farmer2"
+              style={{ position: "absolute", right: "-30px", top: "-50px" }}
+            />
             <img src={Images.banner} className="card-img-top" alt="banner" />
             <div className="card-body">
               <h5 className="card-title pb-2">Multilingual support</h5>
@@ -36,6 +43,11 @@ const Home = () => {
                 NyAI is available in 20+ officially recognized Indian languages.
               </p>
             </div>
+            <img
+              src={Images.farmer}
+              alt="farmer"
+              style={{ position: "absolute", bottom: "5px", left: "-60px" }}
+            />
           </div>
 
           <div className="card p-2 orangeCard">
@@ -45,11 +57,7 @@ const Home = () => {
                 className="mb-5 firstImg"
                 alt="digiLocker"
               />
-              <img
-                src={Images.aadhar}
-                className="mt-5 firstImg"
-                alt="digiLocker"
-              />
+              <img src={Images.aadhar} className="mt-5 firstImg" alt="aadhar" />
             </div>
             <div className="card-body">
               <h5 className="card-title pb-2">Multilingual support</h5>
@@ -59,7 +67,28 @@ const Home = () => {
             </div>
           </div>
 
+          <div className="circleDiv">
+            <span
+              className="circle"
+              style={{ backgroundColor: "#477769", left: "200px" }}
+            ></span>
+            <span
+              className="circle"
+              style={{ backgroundColor: "#eb934f", right: "200px" }}
+            ></span>
+          </div>
+
           <div className="card p-2 greenCard">
+            <img
+              src={Images.lawyer2}
+              alt="lawyer2"
+              style={{ position: "absolute", bottom: "-20px", left: "2px" }}
+            />
+            <img
+              src={Images.lawyer1}
+              alt="lawyer1"
+              style={{ position: "absolute", top: "-60px", right: "-60px" }}
+            />
             <img src={Images.lawyer} className="card-img-top" alt="lawyer" />
             <div className="card-body">
               <h5 className="card-title pb-2">
@@ -88,35 +117,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        <span
-          className="circle"
-          style={{ backgroundColor: "#477769", left: "300px" }}
-        ></span>
-        <span
-          className="circle"
-          style={{ backgroundColor: "#eb934f", left: "820px" }}
-        ></span>
-        <img
-          src={Images.farmer}
-          alt="farmer"
-          style={{ position: "relative", top: "-345px", left: "-350px" }}
-        />
-        <img
-          src={Images.farmer2}
-          alt="farmer2"
-          style={{ position: "relative", top: "-670px", left: "-240px" }}
-        />
-        <img
-          src={Images.lawyer2}
-          alt="lawyer2"
-          style={{ position: "relative", top: "-250px", left: "55px" }}
-        />
-        <img
-          src={Images.lawyer1}
-          alt="lawyer1"
-          style={{ position: "relative", top: "-660px", left: "155px" }}
-        />
       </div>
 
       {/* ----------------------------------------------other section on home page------------------------------------------- */}
@@ -131,7 +131,9 @@ const Home = () => {
         <div className="unveiledBox container">
           <div className="row">
             <div className="col">
-              <h2><span style={{backgroundColor: "#477769"}}>01</span>User Input</h2>
+              <h2>
+                <span style={{ backgroundColor: "#477769" }}>01</span>User Input
+              </h2>
               <p>
                 The Jaurney begins by selecting the document you want to
                 generate. This includes entering your personal details and
@@ -143,14 +145,25 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={Images.arrow1} alt="arrow1" style={{position: "relative",top: "-50px",marginBottom:"-40px"}}/>
+          <img
+            src={Images.arrow1}
+            alt="arrow1"
+            style={{
+              position: "relative",
+              top: "-50px",
+              marginBottom: "-40px",
+            }}
+          />
 
-          <div className="row" >
+          <div className="row">
             <div className="col">
               <img src={Images.unveiled2} alt="unveiled2.jpeg" />
             </div>
             <div className="col">
-              <h2><span style={{backgroundColor:"#eb934f"}}>02</span>AI-processing</h2>
+              <h2>
+                <span style={{ backgroundColor: "#eb934f" }}>02</span>
+                AI-processing
+              </h2>
               <p>
                 The Jaurney begins by selecting the document you want to
                 generate. This includes entering your personal details and
@@ -159,11 +172,22 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={Images.arrow2} alt="arrow2" style={{position: "relative",top: "-120px",marginBottom:"-180px"}}/>
+          <img
+            src={Images.arrow2}
+            alt="arrow2"
+            style={{
+              position: "relative",
+              top: "-120px",
+              marginBottom: "-180px",
+            }}
+          />
 
-          <div className="row" style={{marginTop: "-20px"}}>
+          <div className="row" style={{ marginTop: "-20px" }}>
             <div className="col">
-              <h2><span style={{backgroundColor: "#477769"}}>03</span>Document Generation</h2>
+              <h2>
+                <span style={{ backgroundColor: "#477769" }}>03</span>Document
+                Generation
+              </h2>
               <p>
                 The Jaurney begins by selecting the document you want to
                 generate. This includes entering your personal details and
@@ -175,14 +199,25 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={Images.arrow1} alt="arrow1" style={{position: "relative",top: "-45px",marginBottom:"-40px"}}/>
+          <img
+            src={Images.arrow1}
+            alt="arrow1"
+            style={{
+              position: "relative",
+              top: "-45px",
+              marginBottom: "-40px",
+            }}
+          />
 
           <div className="row">
             <div className="col">
               <img src={Images.unveiled4} alt="unveiled4.jpeg" />
             </div>
             <div className="col">
-              <h2><span style={{backgroundColor:"#eb934f"}}>04</span>Legal Expert Verification</h2>
+              <h2>
+                <span style={{ backgroundColor: "#eb934f" }}>04</span>Legal
+                Expert Verification
+              </h2>
               <p>
                 The Jaurney begins by selecting the document you want to
                 generate. This includes entering your personal details and
@@ -191,11 +226,22 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={Images.arrow2} alt="arrow2" style={{position: "relative",top: "-55px",marginBottom:"-50px"}}/>
+          <img
+            src={Images.arrow2}
+            alt="arrow2"
+            style={{
+              position: "relative",
+              top: "-55px",
+              marginBottom: "-50px",
+            }}
+          />
 
           <div className="row">
             <div className="col">
-              <h2><span style={{backgroundColor: "#477769"}}>05</span>Legal resouces and aide</h2>
+              <h2>
+                <span style={{ backgroundColor: "#477769" }}>05</span>Legal
+                resouces and aide
+              </h2>
               <p>
                 The Jaurney begins by selecting the document you want to
                 generate. This inc3ludes entering your personal details and
@@ -209,7 +255,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="seprater" style={{marginBottom: "-100px"}}><img src={Images.starSeprater} alt="Seprater"/></div>
+      <div className="seprater" style={{ marginBottom: "-100px" }}>
+        <img src={Images.starSeprater} alt="Seprater" />
+      </div>
 
       {/* ----------------------------------------------other section on home page------------------------------------------- */}
       <div className="assist">
@@ -217,28 +265,65 @@ const Home = () => {
           <span style={{ color: "#EB934f" }}>Carry Legal Assistance in </span>
           Your Pocket with the NyAi Mobile App
         </p>
-        <img src={Images.mockUp} alt="mokeUp"/>
+        <img src={Images.mockUp} alt="mokeUp" />
       </div>
 
       {/* ----------------------------------------------other section on home page------------------------------------------- */}
       <div className="metrics container-fluid">
         <div className="row">
-          <h2 className="col ms-5 d-flex align-self-center" style={{fontWeight: 700,fontSize:"32px"}}>NyAi's dynamic performance metrics</h2>
+          <h2
+            className="col ms-5 d-flex align-self-center"
+            style={{ fontWeight: 700, fontSize: "32px" }}
+          >
+            NyAi's dynamic performance metrics
+          </h2>
 
-          <div className="col" style={{borderRight: "5px solid #477769",textAlign: "center",fontSize:"24px",fontWeight: 700,color: "black"}}>
-            <div style={{color: "#477769"}}><span style={{fontSize: "50px"}}>5</span> Seconds</div>
+          <div
+            className="col"
+            style={{
+              borderRight: "5px solid #477769",
+              textAlign: "center",
+              fontSize: "24px",
+              fontWeight: 700,
+              color: "black",
+            }}
+          >
+            <div style={{ color: "#477769" }}>
+              <span style={{ fontSize: "50px" }}>5</span> Seconds
+            </div>
             <div>To generate document</div>
-            </div>
+          </div>
 
-          <div className="col" style={{borderRight: "5px solid #477769",color: "#EB934f",textAlign: "center",fontWeight: 700,fontSize: "24px"}}>
-            <div style={{fontSize:"50px"}}>100%</div>
+          <div
+            className="col"
+            style={{
+              borderRight: "5px solid #477769",
+              color: "#EB934f",
+              textAlign: "center",
+              fontWeight: 700,
+              fontSize: "24px",
+            }}
+          >
+            <div style={{ fontSize: "50px" }}>100%</div>
             <div>Cost reduction in legal services</div>
-            </div>
+          </div>
 
-          <div className="col" style={{textAlign: "center",fontWeight: 700,fontSize: "24px",color: "black"}}>
-            <div style={{color: "#477769",fontSize:"50px"}}>90%</div>
-            <div>Time saved:<br/><span style={{fontWeight: 500}}>On routine tasks</span></div>
+          <div
+            className="col"
+            style={{
+              textAlign: "center",
+              fontWeight: 700,
+              fontSize: "24px",
+              color: "black",
+            }}
+          >
+            <div style={{ color: "#477769", fontSize: "50px" }}>90%</div>
+            <div>
+              Time saved:
+              <br />
+              <span style={{ fontWeight: 500 }}>On routine tasks</span>
             </div>
+          </div>
         </div>
       </div>
     </Layout>

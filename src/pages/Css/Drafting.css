@@ -55,7 +55,7 @@
     font-weight: 400;
 }
 
-.btn {
+.choice .row .col .btn {
     width: 250px;
     height: 50px;
     background-color: #eb934f;

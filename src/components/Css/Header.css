@@ -13,19 +13,20 @@ li {
 
 /* HEADER */
 header {
+  max-width: 100vw;
+  max-height: auto;
   position: relative;
-  padding: 10px 45.8px;
   z-index: 5;
 }
 
 .navbar {
-  width: 100%;
+  /* width: 100%; */
   height: 40px;
   max-width: 100vw;
-  margin: 0 0 10px 0;
+  margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .navbar .logo .a {
@@ -42,8 +43,8 @@ header {
 
 .navbar .links {
   display: flex;
-  gap: 2rem;
-  width: 70%;
+  justify-content: space;
+  margin-left: -90px;
 }
 
 .navbar .links .a {
@@ -51,7 +52,7 @@ header {
   font-size: 20px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 20px 0px;
+  padding: 10px 0px;
   margin: 0px 20px;
   display: inline-block;
   position: relative;
@@ -70,12 +71,12 @@ header {
   height: 2px;
   content: "";
   position: absolute;
-  background-color: #eb3;
+  background-color: #eb934f;
 }
 
 .navbar .links .a::before {
   width: 0%;
-  bottom: 10px;
+  bottom: 0px;
 }
 
 .navbar .links .a:hover::before {
@@ -97,9 +98,9 @@ header {
   display: none;
 }
 
-.action_btn {
+div .btn_link button{
   background-color: orange;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
@@ -109,14 +110,12 @@ header {
   cursor: pointer;
 }
 
-.action_btn:hover {
+div .btn_link button:hover {
   scale: 1.05;
   color: black;
+  box-shadow: 5px 5px 10px #477769;
 }
 
-.action_btn:active {
-  scale: 0.95;
-}
 
 /* DROPDOWN MENU */
 .dropdown_menu {
@@ -143,17 +142,22 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
 }
 
-.dropdown_menu .action_btn {
-  width: 100%;
+.dropdown_menu .action_btn .btn_link button {
+  width: 50%;
   display: flex;
   justify-content: center;
 }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 990px) {
-  .navbar .links,
+  .navbar .links{
+    margin-left: -90px;
+  }
   .navbar .action_btn {
     display: none;
   }
@@ -167,9 +171,19 @@ header {
   }
 }
 
+.action_btn .nav_link .btn{
+    background-color: #477769;
+}
+
 @media (min-width: 323px) and (max-width: 990) {
   .navbar .toggle_btn {
     margin-top: 70px;
+  }
+  .navbar .links{
+    margin-left: -90px;
+  }
+  .navbar .links .a{
+  font-size: 16px;
   }
 }
 

@@ -1,24 +1,58 @@
 import Layout from "../components/layout/Layout";
 import AdvocatesElement from "./Advocates/AdvocatesElement.jsx";
-import datas from "./advocates.json";
 import "./Css/advocates.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Advocates = () => {
-  console.log(datas);
+  const [advocates, setAdvocates] = useState([]);
+
+  const lawyersNearby = async (latitude,longitude) => {
+    try {
+      const response = await axios.post("http://localhost:3000/api/v1/lawyersNearby",
+          {"coordinates": {
+            latitude,
+            longitude
+          }}
+      );
+       setAdvocates(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(()=>{
+    lawyersNearby("28.679079", "77.06971");
+  },[])
+
   return (
     <Layout title={"NyAi - Advocates"}>
       <div className="advocates container-fluid">
-        <h1 className="h1">Advocates</h1>
+        
+        <div className="firstDiv">
+          <p className="p">
+            <b>Advocates</b>
+            <br />
+            Nearby You With
+            <br />
+            <b>
+              <span style={{ color: "#EB934F" }}>Ny</span>AI
+            </b>
+          </p>
+          <h4 style={{ color: "rgba(71,119,105,0.6)" }}>All your document needs, all in one place</h4>
+        </div>
+
+          {/* <p>{JSON.stringify(advocates)}</p> */}
         <div className="elements row">
-          {datas.datas.map((data) => (
-            <div className="advocateElements col-5"  key={data.index}>
+          {advocates.map((data) => (
+            <div className="advocateElements col-5"  key={data.position}>
               <AdvocatesElement
-                img={data.img}
-                name={data.name}
+                img={data.thumbnail}
+                title={data.title}
                 phone={data.phone}
-                email={data.email}
+                // email={data.email}
                 address={data.address}
-                skill={data.skill}
+                types={data.types}
               />
             </div>
           ))}

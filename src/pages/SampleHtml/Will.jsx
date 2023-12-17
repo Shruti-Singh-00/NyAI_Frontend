@@ -27,7 +27,7 @@ export const Will = (props) => {
         </center>
         <p>
           This deed of will is executed at <b>——————- (give the name of the place)</b>
-          on this ———— – day of —————( give the date) by Sh.————————————————————
+          on this ———— day of —————( give the date) by Sh.————————————————————
           ————————( name of the person executing or the Testator) resident of
           —————— ————————————————————-( give the residential and permanent
           address of the testator) aged around ————- (age) years, hereinafter
