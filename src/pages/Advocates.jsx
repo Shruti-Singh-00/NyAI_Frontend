@@ -3,13 +3,36 @@ import AdvocatesElement from "./Advocates/AdvocatesElement.jsx";
 import "./Css/advocates.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const Advocates = () => {
+  const params = useParams();
   const [advocates, setAdvocates] = useState([]);
+  const [location, setLocation] = useState(null);
+
+  function handleLocationClick() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      console.log("Geolocation not supported");
+    }
+  }
+  
+  function success(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    setLocation({ latitude, longitude });
+    lawyersNearby(location.latitude, location.longitude);
+    // console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+  }
+
+  function error() {
+    console.log("Unable to retrieve your location");
+  }
 
   const lawyersNearby = async (latitude,longitude) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/lawyersNearby",
+      const response = await axios.post("http://localhost:7000/api/v1/lawyersNearby",
           {"coordinates": {
             latitude,
             longitude
@@ -20,10 +43,11 @@ const Advocates = () => {
       console.log(error);
     }
   };
-
+  
+  handleLocationClick();
   useEffect(()=>{
-    lawyersNearby("28.679079", "77.06971");
-  },[])
+    console.log(params)
+  })
 
   return (
     <Layout title={"NyAi - Advocates"}>
@@ -53,6 +77,7 @@ const Advocates = () => {
                 // email={data.email}
                 address={data.address}
                 types={data.types}
+                rating={data.rating}
               />
             </div>
           ))}

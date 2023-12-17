@@ -1,9 +1,9 @@
 import "../Css/AdvocatesElement.css";
 
 const advocatesElement = (props) => {
-  const { img,title,address,phone,types } = props;
+  const { img,title,address,phone,types, rating} = props;
 
-  console.log(img, title, address, phone,types);
+  console.log(img, title, address, phone,types,rating);
 
   return (
     <div className="advocateElement">
@@ -11,6 +11,7 @@ const advocatesElement = (props) => {
         <div className="row">
       <div className="col-7">
         <img src={img} alt="img1.png" />
+        <div>rating: {rating}</div>
         <div>{phone}</div>
         {/* <div>{email}</div> */}
       </div>
