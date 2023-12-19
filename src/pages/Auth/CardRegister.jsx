@@ -12,7 +12,7 @@ export const CardRegister = ({page,setPage, title, idtype,idNumber,setIdType,set
     try {
         setIdType(idtype);
       const response = await axios.post(
-        `http://localhost:7000/validate-id/${idtype}`,
+        `https://nyai-jr54.onrender.com/validate-id/${idtype}`,
         {
           idType: idtype,
           idNumber,

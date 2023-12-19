@@ -15,7 +15,7 @@ import Login from "./pages/Auth/Login.jsx";
 // import Register from "./pages/Auth/Register.jsx";
 import ForgotPassword from "./pages/Auth/ForgotPassword.jsx";
 import CardRegisterView from "./pages/Auth/CardRegisterView.jsx";
-import {CardRegister} from "./pages/Auth/cardRegister.jsx";
+// import {CardRegister} from "./pages/Auth/cardRegister.jsx";
 import CardRegister0 from "./pages/Auth/CardRegister0.jsx";
 import { useAuth } from "./context/auth.jsx";
 

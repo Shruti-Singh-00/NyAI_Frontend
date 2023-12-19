@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:7000";
+const baseURL = "https://nyai-jr54.onrender.com";
 
 const instance = axios.create({
   // .. congigure axios baseURL

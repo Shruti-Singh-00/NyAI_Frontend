@@ -66,7 +66,7 @@ const CardRegister0 = () => {
         address,
         answer,
       } = formData;
-      const res = await axios.post(`http://localhost:7000/api/v1/auth/register`, {
+      const res = await axios.post(`https://nyai-jr54.onrender.com/api/v1/auth/register`, {
         firstName,
         lastName,
         email,

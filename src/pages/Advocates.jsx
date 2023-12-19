@@ -40,7 +40,7 @@ const Advocates = () => {
 
   const lawyersNearby = async (latitude,longitude) => {
     try {
-      const response = await axios.post("http://localhost:7000/api/v1/lawyersNearby",
+      const response = await axios.post("https://nyai-jr54.onrender.com/api/v1/lawyersNearby",
           {"coordinates": {
             latitude,
             longitude
