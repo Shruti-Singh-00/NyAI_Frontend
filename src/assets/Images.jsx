@@ -22,6 +22,7 @@ const Images = {
     mockUp: new URL('./Unveiled/mockUp.png', import.meta.url).href,
     progress: new URL('./Drafting/progress.png', import.meta.url).href,
     panCard: new URL('./panCard.png', import.meta.url).href,
+    voterId: new URL('./voterId.png', import.meta.url).href,
 }
 
 export default Images

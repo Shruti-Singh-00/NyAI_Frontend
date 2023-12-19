@@ -14,13 +14,17 @@ import Drafting4 from "./pages/Drafting/Drafting4.jsx";
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
 import ForgotPassword from "./pages/Auth/ForgotPassword.jsx";
+import CardRegisterView from "./pages/Auth/CardRegisterView.jsx";
+import CardRegister from "./pages/Auth/cardRegister.jsx";
 
 function App() {
   return (
     <Routes>
       <Route path={"/"} element={<Home />} />
       <Route path={"/login"} element={<Login />} />
-      <Route path={"/register"} element={<Register />} />
+      <Route path={"/register"} element={<CardRegisterView />} />
+      <Route path={"/register/panCard"} element={<CardRegister name= "Pan Card" idType="panCard"/>}/>
+      <Route path={"/register/voterId"} element={<CardRegister name= "Voter ID" idType="voterId"/>}/>
       <Route path={"/forget-Password"} element={<ForgotPassword />} />
       <Route path={"/drafting"} element={<Drafting />} />
       <Route path={"/drafting/browse"} element={<Drafting1 />} />
