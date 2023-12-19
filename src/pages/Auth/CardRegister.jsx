@@ -3,7 +3,7 @@ import Layout from "../../components/layout/Layout";
 import axios from "axios";
 import "../Css/CardRegister.css";
 
-const CardRegister = ({ name, idType }) => {
+const CardRegister = ({ name, idType,setLogin }) => {
   const [result, setResult] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -36,9 +36,11 @@ const CardRegister = ({ name, idType }) => {
       );
       setResult(response.data);
       console.log(response.data.result);
-      alert(`${response.data.success===true?`Success : you have successfully login with ${name}`:`Error : Error in login with ${name}`}`)
+      alert(`${response.data.result===true?`Success : you have successfully login with ${name}`:`Error : Error in login with ${name}`}`)
+      setLogin(response.data.result);
     } catch (error) {
       setResult({ error: "Error validating ID." });
+      setLogin(false);
     }
   };
 
