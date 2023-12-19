@@ -21,6 +21,11 @@ const Images = {
     starSeprater: new URL('./Unveiled/starSeprater.png', import.meta.url).href,
     mockUp: new URL('./Unveiled/mockUp.png', import.meta.url).href,
     progress: new URL('./Drafting/progress.png', import.meta.url).href,
+    bannerImg: new URL('./About/bannerImg.png', import.meta.url).href,
+    team: new URL('./About/Team.jpg', import.meta.url).href,
+    vision: new URL('./About/Vision.jpg', import.meta.url).href,
+    join: new URL('./About/join.jpg', import.meta.url).href,
+    help: new URL('./About/help.png', import.meta.url).href,
 }
 
 export default Images

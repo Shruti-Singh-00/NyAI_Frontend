@@ -1,6 +1,8 @@
 import "./Css/Home.css";
 import Layout from "../components/layout/Layout.jsx";
 import Images from "../assets/Images.jsx";
+import Chatbot from "../components/layout/Chatbot";
+
 
 const Home = () => {
   return (
@@ -325,6 +327,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Chatbot/>
       </div>
     </Layout>
   );
