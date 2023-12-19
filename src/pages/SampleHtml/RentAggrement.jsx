@@ -21,11 +21,11 @@ export const RentAggrement = (props) => {
 
   return (
     <div>
-        <div className="sample">
+        <div className="sample" style={{marginTop: "100vh"}}>
       <center>
         <h2 className="m-4">RENT AGREEMENT</h2>
       </center>
-      <p>
+      <p >
         This Rent Agreement is made on this <b> {date ? date : "( Date )"}</b>{" "}
         by <b>{name ? name : "( Your Name )"}</b>
         S/o <b>{fatherName ? fatherName : "( Father Name )"}</b>.<br />

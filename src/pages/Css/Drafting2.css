@@ -27,6 +27,15 @@
   color: black;
 }
 
+.form-container .container-fluid {
+  width: 100%;
+  height: auto
+}
+.form-container .container-fluid form{
+  width: 100%;
+  height: auto;
+}
+
 .form-control:focus {
   border-color: inherit;
   -webkit-box-shadow: none;

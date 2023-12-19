@@ -8,7 +8,7 @@ const First = ({ page, setPage, setFormData, formData,onChange }) => {
   }
 
   return (
-    <div className="container-md">
+    <div className="container-fluid">
     <form>
         <label>Date</label>
         <div className="mb-3">
@@ -94,7 +94,7 @@ const Second = ({ page, setPage, handleSubmit, formData, setFormData, onChange }
   const { directorName, property, rentAmount, period, rentDate, aggrementDate,aggrementPlace ,witness1,witness2 } = formData;
 
   return (
-    <>
+    <div className="container-fluid">
       <form onSubmit={handleSubmit}>
         <label>Name fo Director</label>
         <div className="mb-3">
@@ -234,7 +234,7 @@ const Second = ({ page, setPage, handleSubmit, formData, setFormData, onChange }
             )}
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
