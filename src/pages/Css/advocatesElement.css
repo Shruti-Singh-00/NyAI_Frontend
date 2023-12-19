@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,800;1,300&display=swap');
+
 .advocateElement{
   width: 100%;
+  overflow: hidden;
   height: 80vh;
 }
 .advocateElement .row{
@@ -13,10 +16,8 @@
 }
 
 .advocateElement .name{
+  font-family: "Mulish";
   font-size: medium;
-  font-weight: 600;
-  font-style:italic;
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -27,4 +28,8 @@
 
 .advocateElement .address{
   justify-self: end;
+}
+
+.phone{
+  font-weight: 500;
 }

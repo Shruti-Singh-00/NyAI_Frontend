@@ -3,9 +3,17 @@ import AdvocatesElement from "./Advocates/AdvocatesElement.jsx";
 import "./Css/advocates.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useAuth } from "../context/auth.jsx";
 
 const Advocates = () => {
+  const navigate = useNavigate();
+  const [auth] = useAuth();
+  useEffect(()=>{
+    if(!auth.user){
+      navigate('/login')
+    }
+  },[])
   const params = useParams();
   const [advocates, setAdvocates] = useState([]);
   const [location, setLocation] = useState(null);
@@ -23,7 +31,7 @@ const Advocates = () => {
     const longitude = position.coords.longitude;
     setLocation({ latitude, longitude });
     lawyersNearby(location.latitude, location.longitude);
-    // console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+    // console.log(Latitude: ${latitude}, Longitude: ${longitude});
   }
 
   function error() {
@@ -45,25 +53,22 @@ const Advocates = () => {
   };
   
   handleLocationClick();
-  useEffect(()=>{
-    console.log(params)
-  })
-
+  // useEffect(()=>{
+  //   console.log(params)
+  // })
   return (
     <Layout title={"NyAi - Advocates"}>
       <div className="advocates container-fluid">
         
         <div className="firstDiv">
           <p className="p">
-            <b>Advocates</b>
-            <br />
-            Nearby You With
-            <br />
+            <b>Advocates </b>
+            Nearby You With 
             <b>
-              <span style={{ color: "#EB934F" }}>Ny</span>AI
+              <span style={{ color: "#EB934F" }}> Ny</span>AI
             </b>
           </p>
-          <h4 style={{ color: "rgba(71,119,105,0.6)" }}>All your document needs, all in one place</h4>
+          <h4 style={{ color: "rgba(71,119,105,0.6)" }}>Empowering voices, championing justice – advocating for you.</h4>
         </div>
 
           {/* <p>{JSON.stringify(advocates)}</p> */}
@@ -76,7 +81,7 @@ const Advocates = () => {
                 phone={data.phone}
                 // email={data.email}
                 address={data.address}
-                types={data.types}
+                types={data.types.slice(0,3)}
                 rating={data.rating}
               />
             </div>

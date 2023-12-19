@@ -29,3 +29,8 @@
     font-size: 20px;
     flex-wrap: wrap;
   }
+
+  .firstDiv{
+    max-width: 90vw;
+    padding-bottom: 30px;
+  }

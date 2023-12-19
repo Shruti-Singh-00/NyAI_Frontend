@@ -3,15 +3,16 @@ import Images from "../../assets/Images";
 import Layout from "../../components/layout/Layout.jsx";
 import "../Css/CardRegisterView.css"
 import { useNavigate } from "react-router-dom";
+// import { Personal,CardRegister } from "./cardRegister.jsx";
 
 const CardRegisterView = () => {
     const navigate = useNavigate();
 
   const pager = (card)=>{
     if(card===1){
-        navigate("/register/panCard");
+        navigate("/register/1");
     }else{
-        navigate("/register/voterId");
+        navigate("/register/2");
     }
   }
 

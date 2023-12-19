@@ -1,9 +1,18 @@
 import Layout from "../components/layout/Layout";
 import "./Css/Drafting.css";
 import Images from "../assets/Images";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useAuth } from "../context/auth";
 
 const Drafting = () => {
+  const navigate = useNavigate();
+  const [auth] = useAuth();
+  useEffect(()=>{
+    if(!auth.user){
+      navigate('/login')
+    }
+  },[]);
   return (
     <Layout title={"NyAi - Drafting"}>
       <div className="Drafting">
