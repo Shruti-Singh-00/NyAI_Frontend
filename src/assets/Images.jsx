@@ -1,7 +1,6 @@
 const Images = {
     logo : new URL('./Navbar/logo.png', import.meta.url).href,
-    human: new URL('./Home/technology-human.png', import.meta.url).href,
-    blob : new URL('./Home/magicpattern-blob.png', import.meta.url).href,
+    human: new URL('./Home/Human.png', import.meta.url).href,
     banner: new URL('./Expert/banner.png', import.meta.url).href,
     lawyer: new URL('./Expert/lawyer.png', import.meta.url).href,
     obligation: new URL('./Expert/obligation.png', import.meta.url).href,

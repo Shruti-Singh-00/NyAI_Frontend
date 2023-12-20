@@ -1,6 +1,7 @@
 import "./Css/Home.css";
 import Layout from "../components/layout/Layout.jsx";
 import Images from "../assets/Images.jsx";
+import Chatbot from "../components/layout/Chatbot";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
         </p>
         <div>
           <center><p className="p2">Your AI-powered legal companion</p></center>
-          <button className="btn started_btn btn-warning">Get Started</button>
+          <button to={"/drafting"} className="btn started_btn btn-warning">Get Started</button>
         </div>
       </div>
 
@@ -325,6 +326,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Chatbot/>
       </div>
     </Layout>
   );

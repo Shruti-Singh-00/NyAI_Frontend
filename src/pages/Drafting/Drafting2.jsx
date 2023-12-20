@@ -103,16 +103,12 @@ const Drafting2 = () => {
             {sampleComponent()}
           </div>
 
-          <div className="col mb-md-0 mb-5">
-            <div className="inputBox">
-              <div className="form-container">
+          <div className="col mb-5 wid">
                 <h2 className="h2">Give Details :-</h2>
                 {component()}
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </Layout>
   );
 };

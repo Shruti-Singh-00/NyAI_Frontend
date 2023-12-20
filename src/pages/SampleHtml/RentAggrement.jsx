@@ -21,7 +21,7 @@ export const RentAggrement = (props) => {
 
   return (
     <div>
-        <div className="sample" style={{marginTop: "100vh"}}>
+        <div className="sample">
       <center>
         <h2 className="m-4">RENT AGREEMENT</h2>
       </center>
