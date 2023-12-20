@@ -1,9 +1,12 @@
 import Layout from "../components/layout/Layout"
 import "./Css/Help.css"
 import Images from "../assets/Images";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import { useEffect } from "react";
+=======
+>>>>>>> origin
 
 
 const Help = () => {
@@ -271,7 +274,11 @@ const Help = () => {
           <b>Extra help and resources</b>
         </h2></div>
 
+<<<<<<< HEAD
       <center><img className="helpImg" src={Images.help} alt="help.png"/></center>
+=======
+      <center><img src={Images.help} alt="help.png"/></center>
+>>>>>>> origin
 
       <div className="FinalHead"><h4>We have a variety of popular legal documents for you to choose from.<br/>
             Find what you need and get started.</h4></div>

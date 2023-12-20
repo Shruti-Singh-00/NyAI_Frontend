@@ -20,8 +20,11 @@ const Images = {
     starSeprater: new URL('./Unveiled/starSeprater.png', import.meta.url).href,
     mockUp: new URL('./Unveiled/mockUp.png', import.meta.url).href,
     progress: new URL('./Drafting/progress.png', import.meta.url).href,
+<<<<<<< HEAD
     panCard: new URL('./panCard.png', import.meta.url).href,
     voterId: new URL('./voterId.png', import.meta.url).href,
+=======
+>>>>>>> origin
     bannerImg: new URL('./About/bannerImg.png', import.meta.url).href,
     team: new URL('./About/Team.jpg', import.meta.url).href,
     vision: new URL('./About/Vision.jpg', import.meta.url).href,

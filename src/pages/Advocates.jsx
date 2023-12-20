@@ -3,6 +3,7 @@ import AdvocatesElement from "./Advocates/AdvocatesElement.jsx";
 import "./Css/advocates.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+<<<<<<< HEAD
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../context/auth.jsx";
 
@@ -14,6 +15,11 @@ const Advocates = () => {
       navigate('/login')
     }
   },[])
+=======
+import {useParams} from "react-router-dom";
+
+const Advocates = () => {
+>>>>>>> origin
   const params = useParams();
   const [advocates, setAdvocates] = useState([]);
   const [location, setLocation] = useState(null);
@@ -40,7 +46,11 @@ const Advocates = () => {
 
   const lawyersNearby = async (latitude,longitude) => {
     try {
+<<<<<<< HEAD
       const response = await axios.post("https://nyai-jr54.onrender.com/api/v1/lawyersNearby",
+=======
+      const response = await axios.post("http://localhost:7000/api/v1/lawyersNearby",
+>>>>>>> origin
           {"coordinates": {
             latitude,
             longitude
@@ -53,9 +63,15 @@ const Advocates = () => {
   };
   
   handleLocationClick();
+<<<<<<< HEAD
   // useEffect(()=>{
   //   console.log(params)
   // })
+=======
+  useEffect(()=>{
+    console.log(params)
+  })
+>>>>>>> origin
   return (
     <Layout title={"NyAi - Advocates"}>
       <div className="advocates container-fluid">

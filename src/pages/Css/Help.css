@@ -15,7 +15,11 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
 .helpImg{
+=======
+img{
+>>>>>>> origin
     max-width: 60vw;
     height: auto;
 }

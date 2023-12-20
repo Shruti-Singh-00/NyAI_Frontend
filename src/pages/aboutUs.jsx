@@ -1,9 +1,12 @@
 import Layout from "../components/layout/Layout"
 import "./Css/aboutUs.css"
 import Images from "../assets/Images";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import { useEffect } from "react";
+=======
+>>>>>>> origin
 
 const AboutUs = () => {
   const navigate = useNavigate();
@@ -22,7 +25,11 @@ const AboutUs = () => {
         </div>
 
         <div>
+<<<<<<< HEAD
           <img className="img00" src={Images.bannerImg} alt="BannerImg.png" />
+=======
+          <img className="img" src={Images.bannerImg} alt="BannerImg.png" />
+>>>>>>> origin
           <h4 className="heading">Welcome to nyAI, where legal simplicity meets technological innovation. We are Courtroom Cartel, proud grand finalists of the esteemed Smart India Hackathon 2023 (SIH 2023).</h4>
         </div>
 

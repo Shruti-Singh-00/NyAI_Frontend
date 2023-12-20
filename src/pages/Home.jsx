@@ -2,6 +2,10 @@ import "./Css/Home.css";
 import Layout from "../components/layout/Layout.jsx";
 import Images from "../assets/Images.jsx";
 import Chatbot from "../components/layout/Chatbot";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin
 
 const Home = () => {
   return (
